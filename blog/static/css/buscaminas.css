@@ -1,0 +1,28 @@
+*{
+    background-color: gray;
+}
+table{
+    border: 2px solid white;
+    
+    margin-top: 60px;
+    background-color: lightgray;
+    
+}
+table td{
+    background-color: lightgray;
+}
+table tr{
+    background-color: lightgray;
+}
+form{
+
+    text-align: center;
+padding: 15px;
+}
+h1{
+
+    text-align: center;
+}
+form button{
+    margin: 30px;
+}

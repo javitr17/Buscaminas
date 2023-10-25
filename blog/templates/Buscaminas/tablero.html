@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="{% static 'css/buscaminas.css' %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:wght@500&display=swap"
+    rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Document</title>
+</head>
+<h1>TABLERO BUSCAMINAS</h1>
+<body class="body_crear_tablero">
+  <form class="form_crear_tablero" action="{% url 'Tablero' %}" method="get">
+    {% for field in table_form %}
+    <div class="form-group">
+      <label for="{{ field.name }}">{{ field.label }}</label>
+      {{ field }}
+    </div>
+    {% endfor %}
+
+    <button type="submit" class="btn_form">Crear tabla</button>
+  </form>
+
+  <div class="container_table">
+    {% if columna and fila %}
+
+<center>
+    <table border="1">
+      {% for row in fila %}
+
+      <tr>
+        {% for col in columna %}
+        <td>
+          ㅤㅤ
+          <br>
+          ㅤㅤ
+
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% endif %}
+  </div>
+</center>
+
+</body>
+
+</html>
